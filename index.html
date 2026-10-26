@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生日蛋糕 · 3D 粒子动画</title>
+    <script type="module" crossorigin src="./assets/index-BMJnaW2i.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CXJHp5qg.css">
+  </head>
+  <body>
+    <div id="loading" class="overlay">
+      <div class="panel">
+        <div class="title">正在生成生日粒子...</div>
+        <div id="loadingTip" class="tip">初始化 WebGL</div>
+        <button id="startBtn" class="hidden" type="button">点击开始</button>
+      </div>
+    </div>
+
+    <section id="envelope" class="envelope hidden" aria-label="生日祝福邮件" tabindex="0">
+      <div class="env-scene">
+        <div class="env-back"></div>
+        <article class="env-paper" aria-label="生日邮件内容">
+          <div class="mail">
+            <button class="mail-close" type="button" aria-label="收起信封">×</button>
+            <div class="mail-head">
+              <div class="mail-row"><span>收件人</span><b data-mail-key="to">江南小续</b></div>
+              <div class="mail-row"><span>主题</span><b data-mail-key="subject">生日快乐！</b></div>
+            </div>
+            <div class="mail-title" data-mail-key="title">Happy Birthday</div>
+            <div class="mail-body" data-mail-key="body">
+                🎉江南小续三周年快乐！一晃相伴三年，我们这三年面对风风雨雨，依旧情谊不散。
+                三载江南，相逢小续。幸得诸君相伴，愿来日清风常在，笑语不绝，情谊绵长。
+                今天把蜡烛点亮，也把未来的日子一起点亮。</div>
+            <div class="mail-foot"><span data-mail-key="from">From：harvey Liu</span><span>2026</span></div>
+          </div>
+        </article>
+        <div class="env-front"><span class="env-hint">💨 对着蜡烛吹口气</span></div>
+        <div class="env-flap"><span>Birthday Mail</span></div>
+      </div>
+    </section>
+
+    <button id="replayBtn" class="replay hidden" type="button">重播（空格）</button>
+    <div id="fatal" class="fatal hidden"></div>
+    <canvas id="stage"></canvas>
+
+  </body>
+</html>
